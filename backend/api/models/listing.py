@@ -1,2 +1,31 @@
-class Listing:
-    pass
+class Listing():
+    columns = ['id',
+               'listing_id',
+               'listing_name',
+               'host_id',
+               'host_identity_verified',
+               'host_name',
+                'neighbourhood_group',
+                'neighbourhood',
+                'lat',
+                'long',
+                'country',
+                'country_code',
+                'instant_bookable',
+                'cancellation_policy',
+                'room_type',
+                'construction_year',
+                'price',
+                'service_fee',
+                'minimum_nights',
+                'number_of_reviews',
+                 'last_review',
+                'reviews_per_month',
+                'review_rate_number',
+                'calculated_host_listings_count',
+                'availability_365',
+                 'house_rules',
+                'license' ]
+
+    def __init__(self,values):
+        self.__dict__ = dict(zip(self.columns,values))

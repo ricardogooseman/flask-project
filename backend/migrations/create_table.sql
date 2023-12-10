@@ -1,4 +1,5 @@
 CREATE TABLE IF NOT EXISTS listings(
+    id SERIAL PRIMARY KEY,
     listing_id  BIGINT,
     listing_name VARCHAR,
     host_id BIGINT,
@@ -13,16 +14,16 @@ CREATE TABLE IF NOT EXISTS listings(
     instant_bookable BOOLEAN,
     cancellation_policy VARCHAR,
     room_type VARCHAR,
-    construction_year INT,
+    construction_year FLOAT,
     price MONEY,
     service_fee MONEY,
-    minimum_nights INTEGER,
-    number_of_reviews INTEGER,
+    minimum_nights FLOAT,
+    number_of_reviews FLOAT,
     last_review TIMESTAMP,
     reviews_per_month FLOAT,
     review_rate_number FLOAT,
-    calculated_host_listings_count INTEGER,
-    availability_365 INTEGER,
+    calculated_host_listings_count FLOAT,
+    availability_365 FLOAT,
 house_rules VARCHAR,
     license VARCHAR
 );
